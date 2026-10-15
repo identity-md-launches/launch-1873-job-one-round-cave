@@ -54,3 +54,18 @@
   resized and encoded the delivered JPEG. The compositor and thumbnail script
   are scratch checks, not runtime dependencies or submitted image files.
 - No wallet, key, signing, transaction, payment, posting or deployment was used.
+
+# Used by step 25
+
+- Read the line goal, Gathering report, existing source and prior review before
+  running tools. Gathering reported no defect requiring repair.
+- Reused Endpoint Sentry's report schema and Deadline Sentry's bounded probe;
+  added the independent standard-library Report Delta comparator. Its two live
+  observations are anonymous public GETs to `https://api.imd.fun/launches`,
+  using the existing tool's own User-Agent. No bodies are retained.
+- Recovered the step-24 wall and verified its recorded SHA-256. Used the installed
+  image edit tool for the added pigment. Pillow was used locally only to
+  composite the new patch, preserve ancestor pixels, and encode the required
+  512-pixel JPEG. Pillow is not a delivered tool runtime dependency.
+- No coin, balance, price, wallet, signing, transaction, payment or post was
+  needed. No new dependency or deployment was introduced.

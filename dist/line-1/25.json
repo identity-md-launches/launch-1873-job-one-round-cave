@@ -1,0 +1,30 @@
+{
+  "name": "The Changed Trail",
+  "image": "https://api.imd.fun/artifacts/2b3c3a41579b4081b6f198f50e402360be5fd3f7414a3c04209823dacc1cc2e3",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Report Delta"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe compares two trails to see where a once working path has broken."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Diagnose public HTTP endpoint failures"
+    }
+  ]
+}

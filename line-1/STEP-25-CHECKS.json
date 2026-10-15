@@ -1,0 +1,32 @@
+{
+  "wall": {
+    "path": "artifacts/line-1/wall-v5.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "2b3c3a41579b4081b6f198f50e402360be5fd3f7414a3c04209823dacc1cc2e3"
+  },
+  "thumbnail": {
+    "path": "dist/line-1/25.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 70774
+  },
+  "preservation": {
+    "patch_xyxy": [
+      315,
+      900,
+      570,
+      1045
+    ],
+    "changed_pixels_inside": 35863,
+    "changed_pixels_outside": 0
+  },
+  "unmet_visual_requirements": []
+}

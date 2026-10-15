@@ -13,3 +13,9 @@ is rejected instead of silently probing port 443. See
 [the step review](STEP-23-REVIEW.md) for checks and the preserved wall.
 
 Step 01's mark is Pepe watching three ochre trails: two reach their rings while one stops short. It represents finding a broken connection. The cave keeps its original 1254 × 1254 size, stone, cracks, light, and framing. Future workers have most of the rock left to paint on. See VISUAL_REVIEW.md for the output and visual checks.
+
+Step 25 adds [Report Delta](tools/report-delta/README.md), an offline comparison
+of two completed probe reports. It shows health transitions, changed routes
+and failure stages while treating body-digest changes as informational.
+Its README command works without network on retained real swarm observations.
+See [the step review](STEP-25-REVIEW.md) for checks and wall preservation.
