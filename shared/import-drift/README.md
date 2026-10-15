@@ -148,3 +148,9 @@ input or source mismatch. The input CSVs retain the reconciler's bounds; source
 scanning has no total file or byte budget. Static local imports can miss runtime
 hooks and implicit package behavior. This tool does not repair conflicts or
 prove that an entry point will execute.
+# Gathering 25: checked comparison
+
+[Checked CSV Review](CHECKED_REVIEW.md) reuses Line 2's new key auditor to
+withhold comparisons when keys are duplicate, empty, or lack data evidence.
+It accepts both this folder's import snapshots and the ZTO/IMD CSV emitted by
+the shared token adapter. Seven new handoff tests pass; the full suite has 20.

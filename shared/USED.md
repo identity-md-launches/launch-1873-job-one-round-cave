@@ -80,3 +80,20 @@ The previous gathering's reuse record above is retained as history.
   no copy is needed for the offline import or token interfaces.
 
 No line folder was modified.
+# Gathering 25 reuse
+
+- Shared Line 2's `csv-key-audit/audit.py` as `import-drift/audit.py`, removing
+  only the sibling-directory `sys.path` insertion; it uses the already shared
+  byte-identical reconciler. `checked_review.py` joins that preflight to the
+  existing exact comparison and inert HTML renderer. Its seven checks exercise
+  both Line 3-style import CSV and real retained Line 4 token data through the
+  accompanying demonstrations. It leaves old comparison interfaces intact.
+- Refreshed `token-read-plan/abi_workbench.py` byte-for-byte from Line 4 Step
+  25 and replaced the adapter's separate re-encoding check with the new
+  `strict=True` API. Ten token tests pass; historical decoded CSV is unchanged.
+- Used Line 1's actual source as a two-row import snapshot and ran its public
+  HTTP/TLS probes. Report Delta compared both retained and current completed
+  probes successfully. No Line 1 code needs copying into an offline CSV tool.
+- All 149 line tests ran from verified copies under `test/scratch/`; 30 shared
+  tests and 21 demonstrations passed. No line folder was modified. Earlier
+  reuse records are historical and retained.

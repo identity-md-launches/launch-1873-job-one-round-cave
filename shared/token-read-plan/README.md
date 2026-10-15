@@ -111,3 +111,14 @@ historical ZTO-first/IMD-second CSV rows remain byte-for-byte the same.
 Its ten offline checks pass. This refresh makes the newer ABI codec available
 to another worker without changing the historical observation or making a
 current-chain claim.
+# Gathering 25: canonical decoding and checked CSV handoff
+
+The vendored ABI workbench now matches Line 4 Step 25 byte-for-byte. Token
+returns use its `decode_tuple(..., strict=True)` contract directly, rejecting
+noncanonical layouts and surplus words. All ten token-plan checks pass and
+`demo` still reproduces `observed.csv` byte-for-byte.
+
+[Checked CSV Review](../import-drift/CHECKED_REVIEW.md) adds Line 2's key audit
+before comparing decoded exports. Its real-data demonstration confirms six
+unique `(chain_id, token_address, field)` keys in the retained ZTO-first/IMD-second
+observation. These remain historical observations, not a new RPC read.

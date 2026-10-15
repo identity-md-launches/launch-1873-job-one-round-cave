@@ -157,7 +157,12 @@ def decode_scalar(t, w):
         val=n
     return val
 
-def decode_tuple(params, data):
+def decode_tuple(params, data, *, strict=False):
+    """Decode supported outputs; strict mode requires their canonical encoding.
+
+    Re-encoding also detects aliasing, gaps, reordered/overlapping tails and
+    unused suffixes without maintaining a second set of offset rules.
+    """
     if len(data) % 32: raise ValueError('return data must be whole 32-byte words')
     types = [canonical(p) for p in params]
     head_size = 32 * sum(head_words(t) for t in types)
@@ -189,6 +194,8 @@ def decode_tuple(params, data):
             val=decode_scalar(t, data[pos:pos+32])
         out.append({'name':p.get('name') or f'arg{i}', 'type':t, 'value':val})
         pos += 32 * head_words(t)
+    if strict and encode_tuple(params, [item['value'] for item in out]) != data:
+        raise ValueError('noncanonical return data: strict mode requires exact re-encoding')
     return out
 
 def unique_object(pairs):
@@ -257,6 +264,7 @@ def main():
     sub=ap.add_subparsers(dest='command')
     enc=sub.add_parser('encode'); enc.add_argument('--abi',required=True); enc.add_argument('--function',required=True); enc.add_argument('--args',required=True,help='JSON array of arguments')
     dec=sub.add_parser('decode'); dec.add_argument('--abi',required=True); dec.add_argument('--function',required=True); dec.add_argument('--data',required=True,help='0x-prefixed return bytes')
+    dec.add_argument('--strict', action='store_true', help='require canonical return bytes: no gaps, shared/reordered tails or surplus words')
     a=ap.parse_args()
     try:
         if a.demo: demo(); return 0
@@ -269,7 +277,7 @@ def main():
         if a.command=='decode':
             fn,sig=load_function(a.abi,a.function)
             if not re.fullmatch(r'0x(?:[0-9a-fA-F]{2})*',a.data): raise ValueError('--data must be even-length 0x hex')
-            print(json.dumps({'signature':sig,'outputs':decode_tuple(fn.get('outputs',[]),bytes.fromhex(a.data[2:]))},indent=2)); return 0
+            print(json.dumps({'signature':sig,'outputs':decode_tuple(fn.get('outputs',[]),bytes.fromhex(a.data[2:]),strict=a.strict)},indent=2)); return 0
         ap.print_help(); return 2
     except (ValueError, KeyError, OSError) as e:
         print(f'error: {e}',file=sys.stderr); return 2

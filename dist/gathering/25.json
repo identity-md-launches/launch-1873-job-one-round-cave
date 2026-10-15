@@ -1,0 +1,30 @@
+{
+  "name": "The Two Checked Stones",
+  "image": "https://api.imd.fun/artifacts/7c77987e796cf2889cf2d545361f9a0d73488e0f4ce44fd116f3eade56198281",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Checked CSV Review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two ringed stones joined by chalk dabs mark identities checked before records meet."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

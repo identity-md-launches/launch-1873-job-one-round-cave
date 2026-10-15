@@ -1,0 +1,262 @@
+{
+  "round": 25,
+  "source_copies_identical": true,
+  "sources_unchanged_after_checks": true,
+  "results": [
+    {
+      "suite": "line-1/tools/deadline-sentry",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-1/tools/deadline-sentry",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 11,
+      "elapsed_seconds": 0.442,
+      "stdout": "",
+      "stderr": "test_argument_error (test_deadline_sentry.WatchdogTests.test_argument_error) ... ok\ntest_bad_protocol (test_deadline_sentry.WatchdogTests.test_bad_protocol) ... ok\ntest_failed_probe (test_deadline_sentry.WatchdogTests.test_failed_probe) ... ok\ntest_invalid_deadlines (test_deadline_sentry.WatchdogTests.test_invalid_deadlines) ... ok\ntest_large_pipe_does_not_deadlock (test_deadline_sentry.WatchdogTests.test_large_pipe_does_not_deadlock) ... ok\ntest_no_shell (test_deadline_sentry.WatchdogTests.test_no_shell) ... ok\ntest_partial_output_is_not_success (test_deadline_sentry.WatchdogTests.test_partial_output_is_not_success) ... ok\ntest_real_cli_rejects_zero_port (test_deadline_sentry.WatchdogTests.test_real_cli_rejects_zero_port) ... ok\ntest_real_cli_validation_without_network (test_deadline_sentry.WatchdogTests.test_real_cli_validation_without_network) ... ok\ntest_stalled_worker_killed_and_reaped (test_deadline_sentry.WatchdogTests.test_stalled_worker_killed_and_reaped) ... ok\ntest_success (test_deadline_sentry.WatchdogTests.test_success) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.416s\n\nOK\n"
+    },
+    {
+      "suite": "line-1/tools/endpoint-sentry",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-1/tools/endpoint-sentry",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 17,
+      "elapsed_seconds": 0.314,
+      "stdout": "",
+      "stderr": "test_body_limit_and_exact_limit (test_sentry.SentryTests.test_body_limit_and_exact_limit) ... ok\ntest_cli_validation (test_sentry.SentryTests.test_cli_validation) ... ok\ntest_cli_zero_port_is_argument_error_without_network (test_sentry.SentryTests.test_cli_zero_port_is_argument_error_without_network) ... ok\ntest_default_and_explicit_ports_reach_requested_destination (test_sentry.SentryTests.test_default_and_explicit_ports_reach_requested_destination) ... ok\ntest_explicit_zero_port_rejected_before_connection (test_sentry.SentryTests.test_explicit_zero_port_rejected_before_connection) ... ok\ntest_json_expectation_and_no_authorization (test_sentry.SentryTests.test_json_expectation_and_no_authorization) ... ok\ntest_missing_path_and_type_mismatch (test_sentry.SentryTests.test_missing_path_and_type_mismatch) ... ok\ntest_network_error_categories (test_sentry.SentryTests.test_network_error_categories) ... ok\ntest_pointer_escapes_and_root (test_sentry.SentryTests.test_pointer_escapes_and_root) ... ok\ntest_redirect_explicit_valid_port_preserved (test_sentry.SentryTests.test_redirect_explicit_valid_port_preserved) ... ok\ntest_redirect_loop_and_downgrade (test_sentry.SentryTests.test_redirect_loop_and_downgrade) ... ok\ntest_redirect_zero_port_refused_before_second_connection (test_sentry.SentryTests.test_redirect_zero_port_refused_before_second_connection) ... ok\ntest_relative_redirect_and_limit (test_sentry.SentryTests.test_relative_redirect_and_limit) ... ok\ntest_status_mismatch_is_actionable (test_sentry.SentryTests.test_status_mismatch_is_actionable) ... ok\ntest_strict_json (test_sentry.SentryTests.test_strict_json) ... ok\ntest_truncation_and_compression (test_sentry.SentryTests.test_truncation_and_compression) ... ok\ntest_url_rejections (test_sentry.SentryTests.test_url_rejections) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.267s\n\nOK\n"
+    },
+    {
+      "suite": "line-1/tools/report-delta",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-1/tools/report-delta",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 9,
+      "elapsed_seconds": 0.048,
+      "stdout": "",
+      "stderr": "test_body_change_not_health (test_report_delta.DeltaTests.test_body_change_not_health) ... ok\ntest_different_url_limits_expectations (test_report_delta.DeltaTests.test_different_url_limits_expectations) ... ok\ntest_failed_before_checks (test_report_delta.DeltaTests.test_failed_before_checks) ... ok\ntest_invalid_evidence (test_report_delta.DeltaTests.test_invalid_evidence) ... ok\ntest_loader_and_cli (test_report_delta.DeltaTests.test_loader_and_cli) ... ok\ntest_regression_and_recovery (test_report_delta.DeltaTests.test_regression_and_recovery) ... ok\ntest_strict_json (test_report_delta.DeltaTests.test_strict_json) ... ok\ntest_unknown_expectations (test_report_delta.DeltaTests.test_unknown_expectations) ... ok\ntest_wrapper_and_timeout (test_report_delta.DeltaTests.test_wrapper_and_timeout) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.019s\n\nOK\n"
+    },
+    {
+      "suite": "line-1/tools/tls-route",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-1/tools/tls-route",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "elapsed_seconds": 0.083,
+      "stdout": "",
+      "stderr": "test_certificate_failure_is_distinct_from_tcp (test_tls_route.RouteTests.test_certificate_failure_is_distinct_from_tcp) ... ok\ntest_deadline_kills_a_stalled_worker (test_tls_route.RouteTests.test_deadline_kills_a_stalled_worker) ... ok\ntest_dns_failure_is_reported_without_socket_attempt (test_tls_route.RouteTests.test_dns_failure_is_reported_without_socket_attempt) ... ok\ntest_mixed_routes_identify_tcp_failure_and_verified_tls_success (test_tls_route.RouteTests.test_mixed_routes_identify_tcp_failure_and_verified_tls_success) ... ok\ntest_origin_rejects_secret_bearing_and_invalid_urls (test_tls_route.RouteTests.test_origin_rejects_secret_bearing_and_invalid_urls) ... ok\ntest_private_answer_is_not_connected (test_tls_route.RouteTests.test_private_answer_is_not_connected) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.052s\n\nOK\n"
+    },
+    {
+      "suite": "line-2/tools/csv-key-audit",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-2/tools/csv-key-audit",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 13,
+      "elapsed_seconds": 0.034,
+      "stdout": "",
+      "stderr": "test_cli_exit_status_and_text_report (test_audit.KeyAuditTests.test_cli_exit_status_and_text_report) ... ok\ntest_composite_key_resolves_single_column_duplicates (test_audit.KeyAuditTests.test_composite_key_resolves_single_column_duplicates) ... ok\ntest_composite_tuple_collision_is_not_concatenated (test_audit.KeyAuditTests.test_composite_tuple_collision_is_not_concatenated) ... ok\ntest_duplicate_identical_rows_are_still_ambiguous (test_audit.KeyAuditTests.test_duplicate_identical_rows_are_still_ambiguous) ... ok\ntest_empty_component_can_also_be_duplicate (test_audit.KeyAuditTests.test_empty_component_can_also_be_duplicate) ... ok\ntest_empty_input_has_no_key_evidence (test_audit.KeyAuditTests.test_empty_input_has_no_key_evidence) ... ok\ntest_invalid_later_file_has_no_partial_success_output (test_audit.KeyAuditTests.test_invalid_later_file_has_no_partial_success_output) ... ok\ntest_invalid_options_and_missing_columns (test_audit.KeyAuditTests.test_invalid_options_and_missing_columns) ... ok\ntest_long_key_previews_do_not_masquerade_as_full_values (test_audit.KeyAuditTests.test_long_key_previews_do_not_masquerade_as_full_values) ... ok\ntest_multiline_bom_and_exact_string_semantics (test_audit.KeyAuditTests.test_multiline_bom_and_exact_string_semantics) ... ok\ntest_outside_workspace_rejected_before_open (test_audit.KeyAuditTests.test_outside_workspace_rejected_before_open) ... ok\ntest_overlap_excludes_ambiguous_and_empty_keys (test_audit.KeyAuditTests.test_overlap_excludes_ambiguous_and_empty_keys) ... ok\ntest_sample_caps_preserve_totals_and_report_omissions (test_audit.KeyAuditTests.test_sample_caps_preserve_totals_and_report_omissions) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "suite": "line-2/tools/csv-merge",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-2/tools/csv-merge",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 7,
+      "elapsed_seconds": 0.031,
+      "stdout": "",
+      "stderr": "test_changed_schema_rejected (test_merge.MergeTests.test_changed_schema_rejected) ... ok\ntest_concurrent_add_and_duplicate_group (test_merge.MergeTests.test_concurrent_add_and_duplicate_group) ... ok\ntest_delete_against_edit_is_conflict (test_merge.MergeTests.test_delete_against_edit_is_conflict) ... ok\ntest_exact_text_and_order_independence (test_merge.MergeTests.test_exact_text_and_order_independence) ... ok\ntest_independent_fields_and_column_reorder (test_merge.MergeTests.test_independent_fields_and_column_reorder) ... ok\ntest_same_field_edit_is_conflict_and_csv_is_blocked (test_merge.MergeTests.test_same_field_edit_is_conflict_and_csv_is_blocked) ... ok\ntest_unedited_other_side_accepts_deletion (test_merge.MergeTests.test_unedited_other_side_accepts_deletion) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "suite": "line-2/tools/csv-reconcile",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-2/tools/csv-reconcile",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 17,
+      "elapsed_seconds": 0.037,
+      "stdout": "",
+      "stderr": "test_add_remove_change_and_exact_strings (test_reconcile.ReconciliationTests.test_add_remove_change_and_exact_strings) ... ok\ntest_blank_key_is_literal_and_duplicates_are_ambiguous (test_reconcile.ReconciliationTests.test_blank_key_is_literal_and_duplicates_are_ambiguous) ... ok\ntest_cli_exit_codes_and_parseable_output (test_reconcile.ReconciliationTests.test_cli_exit_codes_and_parseable_output) ... ok\ntest_composite_keys_do_not_concatenate_collisions (test_reconcile.ReconciliationTests.test_composite_keys_do_not_concatenate_collisions) ... ok\ntest_duplicate_key_never_silently_overwrites_or_pairs (test_reconcile.ReconciliationTests.test_duplicate_key_never_silently_overwrites_or_pairs) ... ok\ntest_duplicates_on_candidate_only_still_ambiguous (test_reconcile.ReconciliationTests.test_duplicates_on_candidate_only_still_ambiguous) ... ok\ntest_empty_tables_with_headers (test_reconcile.ReconciliationTests.test_empty_tables_with_headers) ... ok\ntest_ignored_columns (test_reconcile.ReconciliationTests.test_ignored_columns) ... ok\ntest_invalid_inputs (test_reconcile.ReconciliationTests.test_invalid_inputs) ... ok\ntest_invalid_options (test_reconcile.ReconciliationTests.test_invalid_options) ... ok\ntest_multiline_quoted_unicode_and_bom (test_reconcile.ReconciliationTests.test_multiline_quoted_unicode_and_bom) ... ok\ntest_non_utf8_is_rejected (test_reconcile.ReconciliationTests.test_non_utf8_is_rejected) ... ok\ntest_outside_path_rejected_before_open (test_reconcile.ReconciliationTests.test_outside_path_rejected_before_open) ... ok\ntest_reordering_rows_and_columns_is_equal (test_reconcile.ReconciliationTests.test_reordering_rows_and_columns_is_equal) ... ok\ntest_row_and_byte_bounds (test_reconcile.ReconciliationTests.test_row_and_byte_bounds) ... ok\ntest_schema_changes_are_not_claimed_equal (test_reconcile.ReconciliationTests.test_schema_changes_are_not_claimed_equal) ... ok\ntest_text_report_explains_differences_and_duplicate_keys (test_reconcile.ReconciliationTests.test_text_report_explains_differences_and_duplicate_keys) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.009s\n\nOK\n"
+    },
+    {
+      "suite": "line-2/tools/csv-review",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-2/tools/csv-review",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "elapsed_seconds": 0.034,
+      "stdout": "",
+      "stderr": "test_add_remove_schema_and_exact_whitespace (test_review.ReviewTests.test_add_remove_schema_and_exact_whitespace) ... ok\ntest_cli_statuses_and_no_partial_html_on_input_error (test_review.ReviewTests.test_cli_statuses_and_no_partial_html_on_input_error) ... ok\ntest_duplicates_show_all_occurrences_and_ignored_values (test_review.ReviewTests.test_duplicates_show_all_occurrences_and_ignored_values) ... ok\ntest_equal_reordered_records (test_review.ReviewTests.test_equal_reordered_records) ... ok\ntest_hostile_fields_remain_exact_inert_text (test_review.ReviewTests.test_hostile_fields_remain_exact_inert_text) ... ok\ntest_outside_workspace_rejected (test_review.ReviewTests.test_outside_workspace_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "suite": "line-3/tools/import-delta",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-3/tools/import-delta",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 9,
+      "elapsed_seconds": 0.061,
+      "stdout": "",
+      "stderr": "test_cli_determinism_and_statuses (test_delta.DeltaTests.test_cli_determinism_and_statuses) ... ok\ntest_cycle_and_edge_creation_then_removal (test_delta.DeltaTests.test_cycle_and_edge_creation_then_removal) ... ok\ntest_cycle_group_merge_is_reported_as_groups (test_delta.DeltaTests.test_cycle_group_merge_is_reported_as_groups) ... ok\ntest_encoding_namespace_and_relative_imports (test_delta.DeltaTests.test_encoding_namespace_and_relative_imports) ... ok\ntest_modules_entrypoints_and_source_relocation (test_delta.DeltaTests.test_modules_entrypoints_and_source_relocation) ... ok\ntest_nonstructural_changes_and_inert_source (test_delta.DeltaTests.test_nonstructural_changes_and_inert_source) ... ok\ntest_parse_and_dynamic_warnings_survive_identical_graph (test_delta.DeltaTests.test_parse_and_dynamic_warnings_survive_identical_graph) ... ok\ntest_parse_failure_does_not_hide_warning_behind_edge_removal (test_delta.DeltaTests.test_parse_failure_does_not_hide_warning_behind_edge_removal) ... ok\ntest_reject_outside_root_without_reading_it (test_delta.DeltaTests.test_reject_outside_root_without_reading_it) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.033s\n\nOK\n"
+    },
+    {
+      "suite": "line-3/tools/import-impact",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-3/tools/import-impact",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "elapsed_seconds": 0.077,
+      "stdout": "",
+      "stderr": "test_against_independent_forward_reachability (test_impact.ImpactTests.test_against_independent_forward_reachability) ... ok\ntest_cli_errors_have_no_partial_success_output (test_impact.ImpactTests.test_cli_errors_have_no_partial_success_output) ... ok\ntest_deep_chain_is_iterative (test_impact.ImpactTests.test_deep_chain_is_iterative) ... ok\ntest_diamond_shortest_path_and_direction (test_impact.ImpactTests.test_diamond_shortest_path_and_direction) ... ok\ntest_multiple_seeds_cycles_self_loops_and_order (test_impact.ImpactTests.test_multiple_seeds_cycles_self_loops_and_order) ... ok\ntest_original_example_preserves_issues_and_cycles (test_impact.ImpactTests.test_original_example_preserves_issues_and_cycles) ... ok\ntest_real_source_encoding_warnings_and_execution_trap (test_impact.ImpactTests.test_real_source_encoding_warnings_and_execution_trap) ... ok\ntest_unknown_and_empty_selection (test_impact.ImpactTests.test_unknown_and_empty_selection) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.048s\n\nOK\n"
+    },
+    {
+      "suite": "line-3/tools/import-map",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-3/tools/import-map",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 10,
+      "elapsed_seconds": 0.043,
+      "stdout": "",
+      "stderr": "test_bad_source_encodings_report_errors_and_continue (test_import_map.MapperTests.test_bad_source_encodings_report_errors_and_continue) ... ok\ntest_bom_clean_scan_cli_succeeds (test_import_map.MapperTests.test_bom_clean_scan_cli_succeeds) ... ok\ntest_bom_entrypoint_relative_import_cycle_and_strict_json (test_import_map.MapperTests.test_bom_entrypoint_relative_import_cycle_and_strict_json) ... ok\ntest_cycles_against_independent_reachability (test_import_map.MapperTests.test_cycles_against_independent_reachability) ... ok\ntest_deep_graph (test_import_map.MapperTests.test_deep_graph) ... ok\ntest_nested_collision (test_import_map.MapperTests.test_nested_collision) ... ok\ntest_original_example_and_no_execution (test_import_map.MapperTests.test_original_example_and_no_execution) ... ok\ntest_package_collision_reports_both_paths_and_package_precedence (test_import_map.MapperTests.test_package_collision_reports_both_paths_and_package_precedence) ... ok\ntest_parse_error_and_self_cycle (test_import_map.MapperTests.test_parse_error_and_self_cycle) ... ok\ntest_python_source_encodings_preserve_imports_and_line_numbers (test_import_map.MapperTests.test_python_source_encodings_preserve_imports_and_line_numbers) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.017s\n\nOK\n"
+    },
+    {
+      "suite": "line-4/tools/abi-workbench",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/line-4/tools/abi-workbench",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 36,
+      "elapsed_seconds": 0.063,
+      "stdout": "",
+      "stderr": "test_alias_signature_from_real_abi_file (test_abi_workbench.WorkbenchTests.test_alias_signature_from_real_abi_file) ... ok\ntest_argument_count_and_short_returns (test_abi_workbench.WorkbenchTests.test_argument_count_and_short_returns) ... ok\ntest_dynamic_abi_layout (test_abi_workbench.WorkbenchTests.test_dynamic_abi_layout) ... ok\ntest_dynamic_invalid_offsets_and_padding (test_abi_workbench.WorkbenchTests.test_dynamic_invalid_offsets_and_padding) ... ok\ntest_exact_integer_input (test_abi_workbench.WorkbenchTests.test_exact_integer_input) ... ok\ntest_fixed_width_padding (test_abi_workbench.WorkbenchTests.test_fixed_width_padding) ... ok\ntest_gathering_signed_reproduction (test_abi_workbench.WorkbenchTests.test_gathering_signed_reproduction) ... ok\ntest_integer_widths_and_sign_extension (test_abi_workbench.WorkbenchTests.test_integer_widths_and_sign_extension) ... ok\ntest_invalid_boolean (test_abi_workbench.WorkbenchTests.test_invalid_boolean) ... ok\ntest_keccak_independent_vectors (test_abi_workbench.WorkbenchTests.test_keccak_independent_vectors) ... ok\ntest_known_selectors (test_abi_workbench.WorkbenchTests.test_known_selectors) ... ok\ntest_reject_unsupported_types (test_abi_workbench.WorkbenchTests.test_reject_unsupported_types) ... ok\ntest_bad_json_encoding_duplicates_and_depth (test_input_validation.InputValidationTests.test_bad_json_encoding_duplicates_and_depth) ... ok\ntest_bom_and_input_budget (test_input_validation.InputValidationTests.test_bom_and_input_budget) ... ok\ntest_cli_concise_errors (test_input_validation.InputValidationTests.test_cli_concise_errors) ... ok\ntest_cli_malformed_abi_is_error_two (test_input_validation.InputValidationTests.test_cli_malformed_abi_is_error_two) ... ok\ntest_container_and_entry_errors (test_input_validation.InputValidationTests.test_container_and_entry_errors) ... ok\ntest_direct_parameter_validation (test_input_validation.InputValidationTests.test_direct_parameter_validation) ... ok\ntest_missing_and_overloaded_functions (test_input_validation.InputValidationTests.test_missing_and_overloaded_functions) ... ok\ntest_outside_workspace_rejected_before_open (test_input_validation.InputValidationTests.test_outside_workspace_rejected_before_open) ... ok\ntest_parameter_shapes (test_input_validation.InputValidationTests.test_parameter_shapes) ... ok\ntest_selected_outputs_are_checked_even_when_encoding (test_input_validation.InputValidationTests.test_selected_outputs_are_checked_even_when_encoding) ... ok\ntest_unrelated_supported_abi_entry_shapes (test_input_validation.InputValidationTests.test_unrelated_supported_abi_entry_shapes) ... ok\ntest_empty_dynamic_array_and_fixed_array_input (test_scalar_arrays.ScalarArrayTests.test_empty_dynamic_array_and_fixed_array_input) ... ok\ntest_fixed_array_expands_head_and_aliases_canonicalize (test_scalar_arrays.ScalarArrayTests.test_fixed_array_expands_head_and_aliases_canonicalize) ... ok\ntest_reject_malformed_array_return (test_scalar_arrays.ScalarArrayTests.test_reject_malformed_array_return) ... ok\ntest_solidity_spec_dynamic_array_vector (test_scalar_arrays.ScalarArrayTests.test_solidity_spec_dynamic_array_vector) ... ok\ntest_bad_padding_still_rejected (test_strict_decode.StrictDecodeTests.test_bad_padding_still_rejected) ... ok\ntest_canonical_empty_values (test_strict_decode.StrictDecodeTests.test_canonical_empty_values) ... ok\ntest_canonical_mixed_layout (test_strict_decode.StrictDecodeTests.test_canonical_mixed_layout) ... ok\ntest_cli_success_and_failure (test_strict_decode.StrictDecodeTests.test_cli_success_and_failure) ... ok\ntest_gap_before_tail (test_strict_decode.StrictDecodeTests.test_gap_before_tail) ... ok\ntest_overlapping_array_tails (test_strict_decode.StrictDecodeTests.test_overlapping_array_tails) ... ok\ntest_reordered_tails (test_strict_decode.StrictDecodeTests.test_reordered_tails) ... ok\ntest_shared_tail (test_strict_decode.StrictDecodeTests.test_shared_tail) ... ok\ntest_surplus_words (test_strict_decode.StrictDecodeTests.test_surplus_words) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.016s\n\nOK\n"
+    },
+    {
+      "suite": "shared/import-drift",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/shared/import-drift",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 20,
+      "elapsed_seconds": 1.408,
+      "stdout": "",
+      "stderr": "test_cli_statuses_and_no_partial_output_on_bad_input (test_checked_review.CheckedReviewTests.test_cli_statuses_and_no_partial_output_on_bad_input) ... ok\ntest_composite_keys_and_exact_change (test_checked_review.CheckedReviewTests.test_composite_keys_and_exact_change) ... ok\ntest_duplicate_empty_and_header_only_block_comparison (test_checked_review.CheckedReviewTests.test_duplicate_empty_and_header_only_block_comparison) ... ok\ntest_html_inert_for_both_ready_and_blocked_inputs (test_checked_review.CheckedReviewTests.test_html_inert_for_both_ready_and_blocked_inputs) ... ok\ntest_ignore_block_keeps_exact_base_units (test_checked_review.CheckedReviewTests.test_ignore_block_keeps_exact_base_units) ... ok\ntest_outside_input_rejected (test_checked_review.CheckedReviewTests.test_outside_input_rejected) ... ok\ntest_real_token_snapshot_is_ready_and_exact (test_checked_review.CheckedReviewTests.test_real_token_snapshot_is_ready_and_exact) ... ok\ntest_deep_source_chain_and_cycle_do_not_recurse (test_drift.DriftTests.test_deep_source_chain_and_cycle_do_not_recurse) ... ok\ntest_duplicate_keys_ambiguous (test_drift.DriftTests.test_duplicate_keys_ambiguous) ... ok\ntest_html_handoff_status_and_inert_parse_errors (test_drift.DriftTests.test_html_handoff_status_and_inert_parse_errors) ... ok\ntest_import_line_shifts_equal_and_local_links_present (test_drift.DriftTests.test_import_line_shifts_equal_and_local_links_present) ... ok\ntest_module_package_collision_fails_explicitly (test_drift.DriftTests.test_module_package_collision_fails_explicitly) ... ok\ntest_parse_error_retained (test_drift.DriftTests.test_parse_error_retained) ... ok\ntest_python_encodings_produce_equal_structural_snapshots (test_drift.DriftTests.test_python_encodings_produce_equal_structural_snapshots) ... ok\ntest_real_change_and_no_execution (test_drift.DriftTests.test_real_change_and_no_execution) ... ok\ntest_schema_and_outside_path_rejected (test_drift.DriftTests.test_schema_and_outside_path_rejected) ... ok\ntest_text_comparison_preserves_status_and_explains_real_delta (test_drift.DriftTests.test_text_comparison_preserves_status_and_explains_real_delta) ... ok\ntest_conflict_blocks_impact (test_handoff.HandoffTests.test_conflict_blocks_impact) ... ok\ntest_independent_edits_reach_the_entry_point (test_handoff.HandoffTests.test_independent_edits_reach_the_entry_point) ... ok\ntest_mismatched_current_tree_is_rejected (test_handoff.HandoffTests.test_mismatched_current_tree_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 1.372s\n\nOK\n"
+    },
+    {
+      "suite": "shared/token-read-plan",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "test/scratch/gathering25/suites/shared/token-read-plan",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 10,
+      "elapsed_seconds": 0.078,
+      "stdout": "",
+      "stderr": "test_batch_order_is_irrelevant (test_token_read_plan.TokenReadPlanTests.test_batch_order_is_irrelevant) ... ok\ntest_demo_emits_complete_csv (test_token_read_plan.TokenReadPlanTests.test_demo_emits_complete_csv) ... ok\ntest_incomplete_and_malformed_batches_rejected (test_token_read_plan.TokenReadPlanTests.test_incomplete_and_malformed_batches_rejected) ... ok\ntest_input_containment_including_symlink (test_token_read_plan.TokenReadPlanTests.test_input_containment_including_symlink) ... ok\ntest_json_limits_duplicate_keys_and_cli_error (test_token_read_plan.TokenReadPlanTests.test_json_limits_duplicate_keys_and_cli_error) ... ok\ntest_mutated_plan_rejected (test_token_read_plan.TokenReadPlanTests.test_mutated_plan_rejected) ... ok\ntest_no_rounding_or_exponent_notation (test_token_read_plan.TokenReadPlanTests.test_no_rounding_or_exponent_notation) ... ok\ntest_noncanonical_return_bytes_rejected (test_token_read_plan.TokenReadPlanTests.test_noncanonical_return_bytes_rejected) ... ok\ntest_only_pinned_read_calls_and_real_destinations (test_token_read_plan.TokenReadPlanTests.test_only_pinned_read_calls_and_real_destinations) ... ok\ntest_real_ethereum_observation (test_token_read_plan.TokenReadPlanTests.test_real_ethereum_observation) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.036s\n\nOK\n"
+    }
+  ],
+  "line_tests": 149,
+  "shared_tests": 30,
+  "ok": true
+}

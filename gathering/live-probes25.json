@@ -1,0 +1,161 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/endpoint-sentry/sentry.py",
+      "https://api.imd.fun/launches",
+      "--timeout",
+      "4",
+      "--json",
+      "--expect-path",
+      "/launches/0/status"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "schema": "endpoint-sentry/v1",
+      "url": "https://api.imd.fun/launches",
+      "checked_at": "2026-10-15T17:23:39.694016+00:00",
+      "ok": true,
+      "hops": [
+        {
+          "url": "https://api.imd.fun/launches",
+          "status": 200,
+          "headers_ms": 194.635,
+          "content_type": "application/json; charset=utf-8",
+          "content_encoding": "identity",
+          "body_bytes": 125968,
+          "body_sha256": "5ec0acb0fd0b0f0dceb68f8cf55b3ec6e399dcaf3fa928e3b1d35479724f85c4"
+        }
+      ],
+      "checks": [
+        {
+          "name": "status",
+          "ok": true,
+          "expected": 200,
+          "actual": 200
+        },
+        {
+          "name": "json",
+          "ok": true
+        },
+        {
+          "name": "json_pointer",
+          "path": "/launches/0/status",
+          "ok": true
+        }
+      ],
+      "limits": {
+        "timeout_seconds": 4.0,
+        "max_bytes": 1048576,
+        "max_redirects": 3
+      },
+      "final_url": "https://api.imd.fun/launches",
+      "elapsed_ms": 224.767
+    },
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/deadline-sentry/deadline_sentry.py",
+      "--deadline",
+      "5",
+      "https://api.imd.fun/launches",
+      "--timeout",
+      "4",
+      "--json",
+      "--expect-path",
+      "/launches/0/status"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "ok": true,
+      "probe": {
+        "schema": "endpoint-sentry/v1",
+        "url": "https://api.imd.fun/launches",
+        "checked_at": "2026-10-15T17:23:39.710475+00:00",
+        "ok": true,
+        "hops": [
+          {
+            "url": "https://api.imd.fun/launches",
+            "status": 200,
+            "headers_ms": 172.468,
+            "content_type": "application/json; charset=utf-8",
+            "content_encoding": "identity",
+            "body_bytes": 125968,
+            "body_sha256": "5ec0acb0fd0b0f0dceb68f8cf55b3ec6e399dcaf3fa928e3b1d35479724f85c4"
+          }
+        ],
+        "checks": [
+          {
+            "name": "status",
+            "ok": true,
+            "expected": 200,
+            "actual": 200
+          },
+          {
+            "name": "json",
+            "ok": true
+          },
+          {
+            "name": "json_pointer",
+            "path": "/launches/0/status",
+            "ok": true
+          }
+        ],
+        "limits": {
+          "timeout_seconds": 4.0,
+          "max_bytes": 1048576,
+          "max_redirects": 3
+        },
+        "final_url": "https://api.imd.fun/launches",
+        "elapsed_ms": 203.096
+      },
+      "schema": "deadline-sentry/v1",
+      "deadline_seconds": 5.0,
+      "elapsed_ms": 229.75
+    },
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/tls-route/tls_route.py",
+      "https://api.imd.fun",
+      "--deadline",
+      "5"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "schema": "tls-route/v1",
+      "origin": "https://api.imd.fun",
+      "checked_at": "2026-10-15T17:23:39.708241+00:00",
+      "ok": true,
+      "degraded": false,
+      "addresses": [
+        {
+          "address": "69.46.46.29",
+          "family": "IPv4",
+          "ok": true,
+          "tls_version": "TLSv1.3",
+          "certificate": {
+            "expires_at": "2026-12-17T22:53:38+00:00",
+            "days_remaining": 63.23,
+            "dns_names": [
+              "api.imd.fun"
+            ]
+          },
+          "elapsed_ms": 25.484
+        }
+      ],
+      "limits": {
+        "per_address_seconds": 2.0,
+        "max_addresses": 4
+      }
+    },
+    "stderr": ""
+  }
+]

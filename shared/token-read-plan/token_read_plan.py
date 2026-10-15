@@ -99,11 +99,8 @@ def decode_rows(plan, responses):
         for field_index, (name, outtype) in enumerate(FUNCTIONS):
             raw = by_id[token_index * 3 + field_index + 1]
             params = [{'name': name, 'type': outtype}]
-            value = abi.decode_tuple(params, raw)[0]['value']
-            # Workbench itself permits some surplus/shared tails; these single-output
-            # calls must round-trip to the one canonical representation, without extras.
-            if abi.encode_tuple(params, [value]) != raw:
-                raise ValueError(f'{label}.{name}: noncanonical or surplus return data')
+            # Use Line 4's canonical-return contract, including surplus rejection.
+            value = abi.decode_tuple(params, raw, strict=True)[0]['value']
             values[name] = value
         for name, _outtype in FUNCTIONS:
             value = values[name]

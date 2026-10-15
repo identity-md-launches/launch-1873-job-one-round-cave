@@ -1,44 +1,47 @@
-# Gathering 24 — visual review
+# Gathering 25 — visual review
 
-The inherited gathering wall was downloaded from the image URL in
-`dist/gathering/23.json` with an identifying User-Agent. Its SHA-256 was
-`8a6da8f7edad72e85323fa9f58a5c906eb59a4eecad2eecf049874567981c9f0`,
-matching the record. I opened it at full size before editing. The built-in
-imagegen tool made the new pigment design; only its new mark was blended onto
-the verified ancestor. No generated intermediate image was saved in the workspace;
-the saved picture files are the two requested wall paths and the JPEG preview.
+Input: the newest painted gathering record, `dist/gathering/24.json`. Its
+artifact was downloaded with an identifying User-Agent, saved at the working
+wall path, and checked against SHA-256
+`e7a3fd8ca98f132c65b60585e268f685a9b9823183c986037463581666975880`.
+The 1254 × 1254 ancestor was opened before editing. No line wall was edited.
 
-Final outputs:
+The installed image-generation tool edited that exact ancestor. It added two
+small irregular red/yellow ochre stones, each encircled with a broken charcoal
+ring, linked by three pale chalk dabs, in bare stone above and left of Pepe.
+The metaphor is checking each identity before joining records. The original
+Pepe, bowls, strands, bridge and four-trail motif remain in place.
 
-- `artifacts/gathering/wall-v4.png` and identical `wall.png`: PNG, opaque RGB, 1254 × 1254, 3,993,832 bytes each; SHA-256 `e7a3fd8ca98f132c65b60585e268f685a9b9823183c986037463581666975880`.
-- `dist/gathering/24.jpg`: JPEG, 512 × 512, 59,533 bytes.
-- `dist/gathering/24.json`: six required traits, number 24 and the PNG artifact hash.
+The tool's output was used only within x=215..425, y=225..340, with an eight-pixel
+edge blend onto the original. `finish_wall.js` verifies the ancestor hash and
+same dimensions before this one-time operation. It does not draw the motif.
+All pixels outside that rectangle remain identical to the ancestor. The final
+PNG has 23,807 changed pixels with bounding box x=216..424, y=226..339. Detailed
+hashes and dimensions are in `image-checks25.json`.
 
-The new mark is four short, uneven trails of red ochre, yellow ochre, charcoal
-and chalk pebbles converging on an ochre-ringed stone above Pepe. The inherited
-large Pepe remains the main figure, with wide mouth and heavy-lidded eyes.
-His two visible hands were counted visually: each has four fingers and one
-thumb, five digits total. No new hands or handprints were added. The existing
-bowls, trails, loop, lower marks, cave cracks, stalactites, warm lighting, floor
-and square framing remain in place. Pigment is flat, worn and lets rock show
-through. Neither opened output showed letters, numbers, captions, signatures,
-logos, watermarks, borders, frames, real people, political or hateful symbols.
+Final files:
 
-An independent decode-and-compare against the verified ancestor found 11,986
-changed pixels. Their bounding box is x=416..618, y=182..337; **zero pixels
-changed outside the new-mark rectangle** x=410..624, y=180..339. This is
-stronger preservation evidence than visual comparison alone. The new pigment
-area itself necessarily changes stone pixels. Both the final full-size PNG
-and actual 512-pixel JPEG were opened after export.
+- `artifacts/gathering/wall-v5.png` and identical `wall.png`: opaque RGB PNG,
+  1254 × 1254, 3,994,910 bytes, SHA-256
+  `7c77987e796cf2889cf2d545361f9a0d73488e0f4ce44fd116f3eade56198281`.
+- `dist/gathering/25.jpg`: JPEG, 512 × 512, 66,829 bytes.
+- `dist/gathering/25.json`: required record shape, number 25, and the PNG hash.
 
-Unmet visual requirements observed: **none**. The hand count and absence of
-prohibited symbols are visual judgments; the structural check cannot certify
-them. No line wall was edited. No human approval step was requested by this
-assignment.
+Chosen review: open the full-size final PNG and the actual 512-pixel JPEG after
+export, compare the new motif with the ancestor, and inspect hands. Both were
+opened. The inherited main figure remains recognizable as Pepe: broad mouth,
+large heavy-lidded eyes, ochre body and charcoal outline. Each of his two
+visible hands has **four fingers and one thumb, five digits**. No new hands or
+handprints were added. The original hands are outside the changed rectangle.
 
-Final built-in imagegen prompt: edit the supplied square cave wall, keep all
-existing marks, Pepe, cracks, colors, light and framing unchanged; add a small
-prehistoric motif above Pepe's head at about x=350..630, y=230..345: four
-uneven pebble trails in red and yellow ochre, charcoal and chalk meeting at an
-ochre-ringed stone. Worn pigment with bare rock showing. No text, numbers,
-logos, watermark, borders, photography or new hands.
+The new marks use only red/yellow ochre, charcoal and chalk, with rough edges
+and rock texture showing through. The existing rock, cracks, light, square
+framing, ceiling and floor remain unchanged outside the small added area.
+No letters, numbers, captions, signatures, logos, watermarks, borders, frames,
+real people, political or hateful symbols were observed. The additions are
+flat cave pigments; the inherited cave itself is retained as supplied.
+
+Unmet visual requirements observed: **none**. Hand counting, style and absence
+of prohibited content are visual judgments, not machine certification. The
+pixel comparison certifies preservation outside the addition, not aesthetics.
+No separate human approval was required for this assignment.

@@ -6,40 +6,19 @@
       1254
     ],
     "format": "PNG",
-    "sha256": "e7a3fd8ca98f132c65b60585e268f685a9b9823183c986037463581666975880",
-    "bytes": 3993832
+    "sha256": "7c77987e796cf2889cf2d545361f9a0d73488e0f4ce44fd116f3eade56198281",
+    "bytes": 3994910
   },
   "jpeg": {
     "dimensions": [
       512,
       512
     ],
-    "bytes": 59533,
-    "format": "JPEG"
+    "bytes": 66829
   },
-  "gallery_records": 120,
-  "painted_previews": 20,
+  "gallery_records": 125,
+  "painted_previews": 25,
   "placeholders": 100,
-  "gallery_bytes": 98523,
-  "visual_certification": false,
-  "line_files_unchanged": true,
-  "line_tests_passed": 109,
-  "shared_tests_passed": 23,
-  "unmet_visual_requirements": [],
-  "visual_review": "The two visible Pepe hands each have five digits; no new hands. See VISUAL_REVIEW.md.",
-  "changed_pixels_vs_ancestor": 11986,
-  "changed_bounds": [
-    416,
-    182,
-    618,
-    337
-  ],
-  "changed_pixels_outside_new_mark": 0,
-  "inherited_size_exception": {
-    "path": "dist/line-4/01.jpg",
-    "bytes": 143560,
-    "changed": false
-  },
-  "changed_paths_in_scope": true,
-  "new_and_changed_files_under_size_limit": true
+  "gallery_bytes": 96563,
+  "visual_certification": false
 }
