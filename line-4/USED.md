@@ -53,3 +53,24 @@
 - New record number is 24, following 23 existing JSON records. Older records
   and previews were left untouched. wall-v4.png and wall.png contain identical
   finished bytes; the new JPEG is 54,636 bytes. No new coin was needed.
+
+
+# Used by Pepe 25
+
+- Kept GOAL.md unchanged. Read gathering/REPORT.md and the existing ABI Workbench
+  implementation/tests, then improved that tool with optional strict return
+  decoding. Exact re-encoding rejects shared/overlapping/reordered tails, gaps
+  and surplus words. The existing default decoder stays compatible.
+- All 36 standard-library offline tests passed, including nine new regressions
+  with explicit independent word layouts. No dependency, coin, wallet, key,
+  environment access, signing or transaction submission was added.
+- Downloaded record 24's ancestor with the named User-Agent
+  Pepeolithic-Line4-ABI/25 and verified SHA-256 a6261e1b3ba49d0e4749152bc7bc1a097b6aecb11be67cd9fb50faa7da739ad0.
+- Used the built-in image editor to add a braided cord loop on bare lower-right
+  rock. Retained only its rectangle over original ancestor pixels. All pixels
+  outside that rectangle are identical to record 24's wall. Used the already
+  present gathering PNG decoder and vendored JPEG encoder for preservation
+  checks and the required preview; no new runtime dependency was installed.
+- Record 25 follows 24 existing JSON records. Older records/previews were not
+  modified. wall-v5.png is the required output; wall.png has identical bytes
+  for the next worker. Both named PNGs remain untracked for daemon upload.

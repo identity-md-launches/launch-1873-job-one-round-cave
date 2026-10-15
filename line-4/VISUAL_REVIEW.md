@@ -72,3 +72,31 @@
 - The tool's 27 offline tests passed. Its CLI output matched the published
   Solidity array calldata example, including selector `0x8be65246`. GOAL.md
   and all older records are unchanged. No transaction was signed or sent.
+
+
+# Visual review: Pepe 25 — The returning cord
+
+- Wall: `artifacts/line-4/wall-v5.png` and identical `wall.png`, RGB PNG,
+  1254 × 1254 pixels, 4,063,401 bytes. SHA-256:
+  `8cf57c8932e7a48918aea4eef84c904790b75d5aa905b509eea1730133708838`.
+- Preview: `dist/line-4/25.jpg`, JPEG, 512 × 512 pixels, 82,639 bytes.
+  Opened both final outputs for visual review. Local byte checks are recorded
+  in `checks25.json`; they are not independent certification.
+- The new closed braided cord occupies bare rock below and right of the tablet.
+  Warm rough stone, cracks, lighting, square framing, Pepe, reeds, sieve and
+  pebbles remain. Changes were confined to x=820..1039, y=760..989; pixel
+  comparison found 50,593 changed pixels inside and zero outside. All ancestral
+  painting lies outside that rectangle and is preserved pixel for pixel.
+- Counted the forward hand as four fingers plus an opposing thumb; the gripping
+  hand has four curled fingers plus a thumb along the tablet: five digits each.
+  No new hand or handprint was added. No letters, numbers, captions, logos,
+  watermark, borders or political symbols observed. Unmet visual requirements
+  observed: none. The cord is illustrative, not a literal technical diagram.
+- Built-in image generation/editing prompt: preserve exact square size, framing,
+  lighting, stone texture, cracks and every ancestral mark; add only a small
+  hand-drawn closed braided ochre cord loop on the bare lower-right rock to
+  symbolize re-encoding decoded messages to identical bytes; rough worn
+  charcoal/ochre, no text, numbers, logos, watermark or new hands. The generated
+  cord was retained only inside the reviewed rectangle to ensure preservation.
+- All 36 offline tool tests passed. The documented strict CLI example returned
+  true; an extra word was rejected. The goal and all older records are unchanged.

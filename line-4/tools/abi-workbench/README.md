@@ -13,7 +13,7 @@ From the repository root:
 python3 -B -m unittest discover -s line-4/tools/abi-workbench -v
 ```
 
-This runs 27 regression tests, including the gathering's defect reports,
+This runs 36 regression tests, including the gathering's defect reports,
 all 32 integer widths, malformed output checks, and eight Keccak vectors
 independently obtained using `cast keccak` (Cast is not needed to run the tests).
 All 27 passed locally, including 11 input-boundary tests and four scalar-array
@@ -68,9 +68,9 @@ padding, and nonzero dynamic padding. Direct `encode_value` calls now use the
 same type validation as the CLI.
 
 Tuples, nested arrays, arrays of `string` or dynamic `bytes`, events, fixed
-point and ambiguous overloaded names are explicitly unsupported. The decoder does not enforce a unique ordering of dynamic tails,
-reject shared tails, or reject every surplus word; it is not a full strict-mode
-ABI validator. ABI files are limited to 1 MiB before parsing. Argument JSON and return bytes
+point and ambiguous overloaded names are explicitly unsupported. The default decoder permits noncanonical tail layouts and surplus words for
+compatibility. Use `decode --strict` to require exact canonical re-encoding for
+the supported types; unsupported ABI types remain unsupported. ABI files are limited to 1 MiB before parsing. Argument JSON and return bytes
 are still held in memory without a total size budget. This is a
 local byte interpreter, not proof of an on-chain value or transaction success.
 The tests are regressions, not an independent audit or full ABI conformance suite.
@@ -96,3 +96,32 @@ produce selector `0xa9059cbb`. Real CLI calls with an object-shaped ABI and a
 missing ABI both produced exit 2 and one error line. No RPC was needed for this
 repair, and no signing or transaction submission capability was added. Pepe 24's
 array extension brings the passing total to 27.
+
+
+## Strict return decoding (Pepe 25)
+
+Add `--strict` when interpreting bytes from an untrusted source. After normal
+value and padding checks, the decoder encodes the decoded values again and
+requires byte-for-byte equality. This rejects shared or overlapping dynamic
+tails, reordered tails, gaps and unused suffix words. Empty outputs require
+empty bytes. The Python API is `decode_tuple(params, data, strict=True)`; the
+existing two-argument API and default CLI behavior stay compatible.
+
+One command anyone can run from the repository root:
+
+```sh
+python3 -B line-4/tools/abi-workbench/abi_workbench.py decode --abi line-4/tools/abi-workbench/alias-example.json --function transfer --strict --data 0x0000000000000000000000000000000000000000000000000000000000000001
+```
+
+Tried locally: exits 0 and prints the boolean output `ok: true`. This is an
+offline return-byte fixture, not a transfer, receipt or on-chain observation.
+Appending another 32-byte word exits 2 with `error: noncanonical return data`
+and no success output. The complete suite passes 36 tests, including nine new
+strict-mode regressions with independently laid-out ABI words. They cover mixed
+fixed arrays, ZTO's real address, signed values, strings, dynamic arrays, empty
+values, padding and CLI success/error behavior.
+
+Strict decoding validates byte layout for the supported type subset; it does
+not authenticate the source of those bytes. It holds decoded values and a
+second encoded copy in memory. Existing argument/return input size limits are
+unchanged; do not feed unbounded data to this local CLI.

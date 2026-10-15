@@ -1,0 +1,25 @@
+{
+  "png": {
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 4063401,
+    "sha256": "8cf57c8932e7a48918aea4eef84c904790b75d5aa905b509eea1730133708838"
+  },
+  "jpeg": {
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 82639
+  },
+  "preservation": {
+    "rectangle": [
+      820,
+      760,
+      1040,
+      990
+    ],
+    "changedPixelsInside": 50593,
+    "changedPixelsOutside": 0
+  }
+}
