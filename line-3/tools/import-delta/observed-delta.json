@@ -1,0 +1,56 @@
+{
+  "changes": {
+    "modules": {
+      "added": [],
+      "removed": []
+    },
+    "edges": {
+      "added": [],
+      "removed": []
+    },
+    "entrypoints": {
+      "added": [],
+      "removed": []
+    },
+    "cycle_groups": {
+      "added": [],
+      "removed": []
+    },
+    "source_paths": []
+  },
+  "has_changes": false,
+  "has_warnings": false,
+  "scans": {
+    "before": {
+      "issues": [],
+      "dynamic_imports": []
+    },
+    "after": {
+      "issues": [],
+      "dynamic_imports": []
+    }
+  },
+  "summary": {
+    "before": {
+      "module_count": 2,
+      "local_edge_count": 1,
+      "cycle_count": 0,
+      "issue_count": 0,
+      "entrypoints": [
+        "deadline_sentry",
+        "test_deadline_sentry"
+      ]
+    },
+    "after": {
+      "module_count": 2,
+      "local_edge_count": 1,
+      "cycle_count": 0,
+      "issue_count": 0,
+      "entrypoints": [
+        "deadline_sentry",
+        "test_deadline_sentry"
+      ]
+    }
+  },
+  "scope": "Static explicit local imports only. Changes are graph changes, not all source edits; warnings can hide edges."
+}

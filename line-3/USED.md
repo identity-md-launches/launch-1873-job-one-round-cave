@@ -48,3 +48,21 @@ the PNG-filter approach of `gathering/thumbnail.js` as reference for scratch-onl
 standard-library finalization. Node was unavailable (exit 127); installed
 nothing. Python standard-library PNG processing and a baseline JPEG encoder
 produced the final artifacts. All scratch processing stays out of the delivery.
+
+Step 25 reused the existing Import Map unchanged to add Import Delta, comparing
+explicit local import structure between two source trees. Read the gathering
+report first; no new broken behavior was reported. The new tool reports module,
+edge, entry-point and cycle-group differences, retains both scans' warnings,
+and checks workspace containment before source reads. Nine new behavioral
+tests and all eighteen inherited tests passed. Compared real Deadline Sentry
+source against itself without executing it; retained the no-change report.
+No dependency, financial mechanism, network runtime or new coin is needed.
+
+Recovered the missing wall from record 24's public artifact URL with a dedicated
+User-Agent and verified its SHA-256. Read the imagegen skill and used the
+installed image edit tool to make the two-stone comparison mark. Retained only
+the generated patch on unused lower-left rock, feathering its boundary; zero
+pixels outside x=330..464, y=1120..1224 changed. Existing Pepe, both five-digit
+hands, every prior mark and the rest of the cave remain identical. Pillow was
+used only for artifact preservation, preview encoding and verification; it is
+not a dependency of the delivered standard-library tool. No packages installed.

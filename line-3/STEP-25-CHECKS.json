@@ -1,0 +1,46 @@
+{
+  "step": 25,
+  "tool_tests": {
+    "import_delta": 9,
+    "import_map": 10,
+    "import_impact": 8,
+    "failures": 0
+  },
+  "wall": {
+    "path": "artifacts/line-3/wall-v5.png",
+    "alias": "artifacts/line-3/wall.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "d8bf790f9a251dc7beeef8849118ba81ad20276cbbbfbd01794f2a2433f73747"
+  },
+  "preview": {
+    "path": "dist/line-3/25.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 72194
+  },
+  "preservation": {
+    "ancestor_sha256": "f745d84ca9484eb9d228d1a1c152f828a4ac18882616686a5809499444cc2493",
+    "patch_rectangle": [
+      330,
+      1120,
+      465,
+      1225
+    ],
+    "changed_pixels": 13269,
+    "changed_pixels_outside_patch": 0
+  },
+  "visual_review": {
+    "performed": true,
+    "method": "Opened final PNG and JPEG with view_image; counted both inherited hands.",
+    "digits_per_inherited_hand": [
+      5,
+      5
+    ],
+    "new_hands": 0,
+    "unmet_requirements": []
+  }
+}
